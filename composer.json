@@ -1,5 +1,5 @@
 {
-    "name": "temprodev/one-auth",
+    "name": "temprodev/laravel-one-auth",
     "description": "This will create Authorization with OneID module",
     "type": "library",
     "license": "MIT",
