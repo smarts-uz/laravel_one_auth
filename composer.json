@@ -1,0 +1,26 @@
+{
+    "name": "temprodev/one-auth",
+    "description": "This will create Authorization with OneID module",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Avazbek Nematov",
+            "email": "68123420+avacoderuz@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Teampro\\OneAuth\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Teampro\\OneAuth\\OneAuthServiceProvider"
+            ]
+        }
+    }
+}
