@@ -66,25 +66,13 @@ class OneAuthService
     {
         self::$code = $token;
         $params = self::makeParams();
-        $user = User::query()->where('pinfl',$params['pinfl'] )->where('email', $params['email'])->first();
+        $user = User::query()->where('pinfl',$params['pinfl'] )->orWhere('email', $params['email'])->first();
 
         if (!$user){
-            $user = new User();
-            $user->name = $params['name'];
-            $user->username = $params['username'];
-            $user->firstname = $params['firstname'];
-            $user->lastname = $params['lastname'];
-            $user->midname = $params['midname'];
-            $user->pinfl = $params['pinfl'];
-            $user->inn = $params['inn'];
-            $user->passport = $params['passport'];
-            $user->passport_expire_date = $params['passport_expire_date'];
-            $user->phone = $params['phone'];
-            $user->address = $params['address'];
-            $user->email = $params['email'];
-            $user->password = $params['password'];
+            $user = User::create($params);
             $user->save();
         }
         Auth::login($user);
+
     }
 }

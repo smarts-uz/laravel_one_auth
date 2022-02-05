@@ -9,5 +9,4 @@ return [
     'CLIENT_SECRET' => env('ONE_ID_CLIENT_SECRET', ''),
     'SCOPE' => env('ONE_ID_SCOPE', ''),
     "REDIRECT_URI" => env('ONE_ID_REDIRECT_URI', ''),
-
 ];

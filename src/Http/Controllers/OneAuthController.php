@@ -19,7 +19,6 @@ class OneAuthController extends Controller
 
     public function login(Request $request){
         OneAuthService::authorizeUser($request->code);
-
         return redirect("/");
 
     }
